@@ -14,3 +14,4 @@ GET     /public/                                staticDir:public
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
 GET	/feedback					Application.feedback
+GET	/vote						Application.vote

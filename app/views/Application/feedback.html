@@ -1,6 +1,27 @@
 #{extends 'main.html' /}
-#{set title:'Feedback' /}
+#{set title:'Feedback about Play Framework' /}
 
-<p>Hi</p>
-<p>Message: ${message}</p>
-<p>Count: ${count}</p>
+<p>Welcome to the first app using play!</p>
+<p>${message}</p>
+<div class="like">Like</div>
+<div id="thanks">&nbsp;</div>
+<div style="margin-top: 1%;">
+	<div id="count">${count}</div><div> users like Play framework</div>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$('.like').bind('click', function(){
+		$.ajax({
+			  url: "/vote",
+			  success: function(count){
+			    $('#thanks').html('').html('Thank you!!')
+				$('#count').html('').html(count);
+			  }
+			});
+	});		
+	
+});
+</script>

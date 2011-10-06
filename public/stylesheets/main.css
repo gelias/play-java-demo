@@ -1,0 +1,12 @@
+.like
+{
+	padding:1%;
+	border:1px outset;
+	margin: 20px; 
+	width: 40px;
+	font-style:normal; 
+	font-variant:normal; 
+	font-weight:bold; 
+	font-size:12pt;
+	font-family:trebuchet, sans-serif; cursor: pointer;
+}
